@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.carousel-root {
+    width: 100vw;
+    /* max-width: 600px; Adjust this to fit your layout */
+    margin: 0 auto;
+    max-height: 10vh !important;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  
+  .carousel .slide img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+  }
+  
+  .carousel .legend {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
